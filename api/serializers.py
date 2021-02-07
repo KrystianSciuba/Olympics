@@ -2,23 +2,17 @@ from rest_framework import serializers
 from .models import *
 
 
-class PersonSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Person
-        fields = '__all__'
-
-
-class PersonDetailSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Person
-        fields = '__all__'
-        depth = 2
-
-
 class EventSetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
-        fields = ('event',)
+        fields = ('id','name',)
+
+
+class EventDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Event
+        fields = '__all__'
+        depth = 1
 
 
 class SportDetailSerializer(serializers.ModelSerializer):
@@ -26,7 +20,7 @@ class SportDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Sport
-        fields = ('id', 'sport', 'event_set')
+        fields = ('id', 'name', 'event_set')
 
 
 class GameDetailSerializer(serializers.ModelSerializer):
@@ -72,10 +66,17 @@ class CountrySerializer(serializers.ModelSerializer):
 
 
 class MedalSerializer(serializers.ModelSerializer):
+    event = EventSerializer()
+    game = GameSerializer()
     class Meta:
         model = Medal
         fields = '__all__'
-        depth = 2
+
+
+class MedalSimpleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Medal
+        fields = ('id','color',)
 
 
 class PersonSetSerializer(serializers.ModelSerializer):
@@ -87,8 +88,32 @@ class PersonSetSerializer(serializers.ModelSerializer):
 
 class MedalDetailSerializer(serializers.ModelSerializer):
     person_set = PersonSetSerializer(many=True)
+    game = GameSerializer()
+    event = EventDetailSerializer()
 
     class Meta:
         model = Medal
         fields = ('id', 'color', 'event', 'game', 'person_set')
-        depth = 3
+        depth = 1
+
+
+class PersonSerializer(serializers.ModelSerializer):
+    medals = MedalSimpleSerializer(many=True)
+    class Meta:
+        model = Person
+        fields = ('id', 'name', 'medals')
+
+
+class PersonDetailSerializer(serializers.ModelSerializer):
+    medals = MedalSerializer(many=True)
+    nationality = CountrySerializer()
+    class Meta:
+        model = Person
+        fields = ('id', 'name', 'sex', 'year_of_birth', 'nationality', 'medals')
+
+
+class MedalPeopleSerializer(serializers.ModelSerializer):
+    person_set = PersonSetSerializer(many=True)
+    class Meta:
+        model = Medal
+        fields = ('id', 'color', 'person_set')

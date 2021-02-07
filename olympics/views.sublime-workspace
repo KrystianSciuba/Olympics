@@ -1,0 +1,359 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"i",
+				"import"
+			],
+			[
+				"dateti",
+				"datetime"
+			],
+			[
+				"Blo",
+				"BlogPostForm"
+			],
+			[
+				"for",
+				"from"
+			],
+			[
+				"use",
+				"userpanel_page"
+			],
+			[
+				"tex",
+				"text-align\tproperty"
+			],
+			[
+				"padd",
+				"padding-right\tproperty"
+			],
+			[
+				"back",
+				"background-color\tproperty"
+			],
+			[
+				"mar",
+				"margin-right\tproperty"
+			],
+			[
+				"pad",
+				"padding-right\tproperty"
+			],
+			[
+				"ma",
+				"margin\tproperty"
+			],
+			[
+				"margin",
+				"margin\tproperty"
+			],
+			[
+				"fon",
+				"font-family\tproperty"
+			],
+			[
+				"te",
+				"text-align\tproperty"
+			],
+			[
+				"wid",
+				"width\tproperty"
+			],
+			[
+				"ba",
+				"background-color\tproperty"
+			],
+			[
+				"a",
+				"auto\tmargin-left"
+			],
+			[
+				"d",
+				"display\tproperty"
+			],
+			[
+				"in",
+				"inline-block\tdisplay"
+			],
+			[
+				"marg",
+				"margin\tproperty"
+			],
+			[
+				"border-c",
+				"border-color\tproperty"
+			],
+			[
+				"do",
+				"double\tborder-bottom-style"
+			],
+			[
+				"border-t",
+				"border-top-style\tproperty"
+			],
+			[
+				"bo",
+				"border-style\tproperty"
+			],
+			[
+				"font",
+				"font-style\tproperty"
+			],
+			[
+				"DI",
+				"DIV\tTag"
+			],
+			[
+				"bac",
+				"background-color\tproperty"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"fl",
+				"float\tproperty"
+			],
+			[
+				"Ob",
+				"object"
+			],
+			[
+				"obje",
+				"object"
+			],
+			[
+				"test",
+				"test_page"
+			],
+			[
+				"s",
+				"something_here"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"temp",
+				"TEMPLATES"
+			],
+			[
+				"BA",
+				"BASE_DIR"
+			],
+			[
+				"home",
+				"home_page"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 124.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Programowanie/olympics/manage.py",
+		"/C/Programowanie/olympics/olympics/admin.py",
+		"/C/Programowanie/olympics/api/admin.py",
+		"/C/Programowanie/olympics/api/views.py",
+		"/C/Programowanie/olympics/olympics/urls.py",
+		"/C/Programowanie/olympics/api/apps.py",
+		"/C/Programowanie/olympics/api/migrations/0003_auto_20201119_2014.py",
+		"/C/Programowanie/olympics/api/migrations/0004_personmedal_name.py",
+		"/C/Programowanie/olympics/api/models.py",
+		"/C/Programowanie/olympics/olympics/settings.py",
+		"/C/Programowanie/Olympics/.git/COMMIT_EDITMSG",
+		"/C/Programowanie/olympics/olympics/models.py",
+		"/C/Programowanie/olympics/api/migrations/0002_auto_20201119_2008.py",
+		"/C/Programowanie/olympics/olympics/models2.py",
+		"/C/Programowanie/olympics/olympics/views.py",
+		"/C/Programowanie/Dev/try_django/src/blog/models.py",
+		"/C/Programowanie/Dev/try_django/src/try_django/views.py",
+		"/C/Programowanie/Dev/try_django/src/try_django/urls.py",
+		"/C/Programowanie/Dev/try_django/src/templates/login.html",
+		"/C/Programowanie/Dev/try_django/src/templates/base.html",
+		"/C/Programowanie/Dev/try_django/src/try_django/settings.py",
+		"/C/Users/Krystian/Dev/try_django/src/static/css/mystyle.css",
+		"/C/Users/Krystian/Dev/try_django/src/blog/templates/blog/list.html",
+		"/C/Users/Krystian/Dev/try_django/src/blog/templates/blog/detail.html",
+		"/C/Users/Krystian/Dev/try_django/src/templates/contact.html",
+		"/C/Users/Krystian/Dev/try_django/src/blog/views.py",
+		"/C/Users/Krystian/Dev/try_django/src/templates/base.html",
+		"/C/Users/Krystian/Dev/try_django/src/try_django/urls.py",
+		"/C/Users/Krystian/Dev/try_django/src/blog/models.py",
+		"/C/Users/Krystian/Dev/try_django/src/templates/test.html",
+		"/C/Users/Krystian/Dev/try_django/src/try_django/views.py",
+		"/C/Users/Krystian/Dev/try_django/src/templates/userpanel.html",
+		"/C/Users/Krystian/Dev/try_django/src/templates/about.html",
+		"/C/Users/Krystian/Desktop/BH.cfg",
+		"/C/Users/Krystian/Dev/try_django/src/blog/templates/blog_post_create.html",
+		"/C/Users/Krystian/Dev/try_django/src/templates/blog_post_list.html",
+		"/C/Users/Krystian/Dev/try_django/src/try_django/settings.py",
+		"/C/Users/Krystian/Dev/try_django/src/templates/mystyle.css",
+		"/C/Users/Krystian/Dev/try_django/src/templates/blog_post_update.html",
+		"/C/Users/Krystian/Dev/try_django/src/blog/tests.py",
+		"/C/Users/Krystian/Dev/try_django/src/blog/admin.py",
+		"/C/Users/Krystian/Dev/try_django/src/templates/blog_post_create.html",
+		"/C/Users/Krystian/Dev/try_django/src/blog/urls.py",
+		"/C/Users/Krystian/Dev/try_django/src/templates/blog_post_delete.html",
+		"/C/Users/Krystian/Dev/try_django/src/templates/blog_post_detail.html",
+		"/C/Users/Krystian/Dev/try_django/src/templates/home.html",
+		"/C/Users/Krystian/Dev/try_django/src/templates/hello_world.html"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "views.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 236.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
