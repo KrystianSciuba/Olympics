@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import *
+from django.urls import path
 
 
 class EventSetSerializer(serializers.ModelSerializer):
@@ -41,9 +42,16 @@ class GameMedalSerializer(serializers.Serializer):
 
 
 class SportSerializer(serializers.ModelSerializer):
+
+    url = serializers.SerializerMethodField('create_url')
+
+
+    def create_url(self, sport):
+        return ("http://127.0.0.1:8000/api/sports/" + "%d" % sport.id)
+
     class Meta:
         model = Sport
-        fields = '__all__'
+        fields = ('id', 'name', 'url')
 
 
 class EventSerializer(serializers.ModelSerializer):

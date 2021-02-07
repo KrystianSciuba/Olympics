@@ -3,19 +3,12 @@ from . import views
 
 
 urlpatterns = [
-    path('sportsclass/', views.SportListClass.as_view()),
-    path('eventssclass/', views.EventListClass.as_view()),
-    path('gamesclass/', views.GameListClass.as_view()),
-    path('countrysclass/', views.CountryListClass.as_view()),
-    path('medalsclass/', views.MedalListClass.as_view()),
-    path('personsclass/', views.PersonListClass.as_view()),
-
-    path('sports/', views.sport_list),
-    path('games/', views.game_list),
-    path('events/', views.event_list),
-    path('persons/', views.person_list),
-    path('medals/', views.medal_list),
-    path('countries/', views.country_list),
+    path('sports/', views.SportList.as_view()),
+    path('events/', views.EventList.as_view()),
+    path('games/', views.GameList.as_view()),
+    path('countrys/', views.CountryList.as_view()),
+    path('medals/', views.MedalList.as_view()),
+    path('persons/', views.PersonList.as_view()),
 
 
     path('persons/<int:pk>', views.person_detail),
