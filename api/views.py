@@ -8,10 +8,38 @@ import django_filters
 from rest_framework import generics
 
 
+class SportListClass(generics.ListAPIView):
+    queryset = Sport.objects.all()
+    serializer_class = SportSerializer
+
+
+class EventListClass(generics.ListAPIView):
+    queryset = Event.objects.all()
+    serializer_class = EventSerializer
+
+
 class GameListClass(generics.ListAPIView):
     queryset = Game.objects.all()
     serializer_class = GameSerializer
     filter_class = GameFilter
+
+
+class CountryListClass(generics.ListAPIView):
+    queryset = Country.objects.all()
+    serializer_class = CountrySerializer
+
+
+class MedalListClass(generics.ListAPIView):
+    queryset = Medal.objects.all()
+    serializer_class = MedalSerializer
+    filter_class = MedalFilter
+
+
+class PersonListClass(generics.ListAPIView):
+    queryset = Person.objects.all()
+    serializer_class = PersonSerializer
+    filter_class = PersonFilter
+
 
 
 
