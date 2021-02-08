@@ -3,19 +3,19 @@ from . import views
 
 
 urlpatterns = [
-    path('sports/', views.SportList.as_view()),
-    path('events/', views.EventList.as_view()),
-    path('games/', views.GameList.as_view()),
-    path('countrys/', views.CountryList.as_view()),
-    path('medals/', views.MedalList.as_view()),
-    path('persons/', views.PersonList.as_view()),
+    path('sports/', views.SportList.as_view(), name='SportList'),
+    path('events/', views.EventList.as_view(), name='EventList'),
+    path('games/', views.GameList.as_view(), name='GameList'),
+    path('countrys/', views.CountryList.as_view(), name='CountryList'),
+    path('medals/', views.MedalList.as_view(), name='MedalList'),
+    path('persons/', views.PersonList.as_view(), name='PersonList'),
 
 
-    path('persons/<int:pk>', views.person_detail),
-    path('medals/<int:pk>', views.medal_detail),
-    path('sports/<int:pk>', views.sport_detail),
-    path('games/<int:pk>', views.game_detail),
-    path('events/<int:pk>', views.event_detail),
+    path('persons/<int:pk>', views.person_detail, name='PersonDetail'),
+    path('medals/<int:pk>', views.medal_detail, name='MedalDetail'),
+    path('sports/<int:pk>', views.sport_detail, name='SportDetail'),
+    path('games/<int:pk>', views.game_detail, name='GameDetail'),
+    path('events/<int:pk>', views.event_detail, name='EventDetail'),
 
 
     path('games/<int:pk>/medals/', views.game_medal),
