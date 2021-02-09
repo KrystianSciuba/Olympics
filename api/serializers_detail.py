@@ -3,19 +3,18 @@ from .models import *
 from . import serializers_nested
 
 
+class CountryDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Country
+        fields = '__all__'
+        depth = 1
+
+
 class EventDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
         fields = '__all__'
         depth = 1
-
-
-class SportDetailSerializer(serializers.ModelSerializer):
-    event_set = serializers_nested.EventSetSerializer(many=True)
-
-    class Meta:
-        model = Sport
-        fields = ('id', 'name', 'event_set')
 
 
 class GameDetailSerializer(serializers.ModelSerializer):
@@ -42,6 +41,14 @@ class PersonDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Person
         fields = ('id', 'name', 'sex', 'year_of_birth', 'nationality', 'medals')
+
+
+class SportDetailSerializer(serializers.ModelSerializer):
+    event_set = serializers_nested.EventSetSerializer(many=True)
+
+    class Meta:
+        model = Sport
+        fields = ('id', 'name', 'event_set')
 
 
 class MedalPeopleSerializer(serializers.ModelSerializer):

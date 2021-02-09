@@ -3,11 +3,11 @@ from .models import *
 from . import serializers_nested
 
 
-class SportSerializer(serializers.ModelSerializer):
-    url = serializers.HyperlinkedIdentityField(view_name='SportDetail', read_only=True)
+class CountrySerializer(serializers.ModelSerializer):
+    url = serializers.HyperlinkedIdentityField(view_name='CountryDetail', read_only=True)
 
     class Meta:
-        model = Sport
+        model = Country
         fields = ('id', 'url', 'name')
 
 
@@ -25,15 +25,7 @@ class GameSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Game
-        fields = ('id', 'url', 'events')
-
-
-class CountrySerializer(serializers.ModelSerializer):
-    url = serializers.HyperlinkedIdentityField(view_name='CountryDetail', read_only=True)
-
-    class Meta:
-        model = Country
-        fields = ('id', 'url', 'name')
+        fields = ('id', 'url', 'year', 'city', 'season')
 
 
 class MedalSerializer(serializers.ModelSerializer):
@@ -53,3 +45,11 @@ class PersonSerializer(serializers.ModelSerializer):
     class Meta:
         model = Person
         fields = ('id', 'url', 'name', 'medals')
+
+
+class SportSerializer(serializers.ModelSerializer):
+    url = serializers.HyperlinkedIdentityField(view_name='SportDetail', read_only=True)
+
+    class Meta:
+        model = Sport
+        fields = ('id', 'url', 'name')

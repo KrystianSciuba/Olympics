@@ -63,5 +63,5 @@ class CountrySimpleSerializer(serializers.ModelSerializer):
 class PersonSetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Person
-        exclude = ('medals', 'sex')
+        exclude = ('medals', 'sex', 'year_of_birth')
         depth = 2
