@@ -5,6 +5,9 @@ class Sport (models.Model):
     id = models.AutoField(primary_key=True)
     name = models.TextField(max_length=256)
 
+    def __str__(self):
+        return 'id {self.id}, name: {self.name}'.format(self=self)
+
 
 class Event(models.Model):
     id = models.AutoField(primary_key=True)
