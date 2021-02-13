@@ -11,10 +11,10 @@ class CountryDetailSerializer(serializers.ModelSerializer):
 
 
 class EventDetailSerializer(serializers.ModelSerializer):
+    sport = serializers_nested.SportNameSerializer()
     class Meta:
         model = Event
-        fields = '__all__'
-        depth = 1
+        fields = ('name', 'sport')
 
 
 class GameDetailSerializer(serializers.ModelSerializer):
@@ -24,13 +24,13 @@ class GameDetailSerializer(serializers.ModelSerializer):
 
 
 class MedalDetailSerializer(serializers.ModelSerializer):
-    person_set = serializers_nested.PersonSetSerializer(many=True)
+    person_set = serializers_nested.MedalistsNameSerializer(many=True)
     game = serializers_nested.GameSerializer()
-    event = EventDetailSerializer()
+    event = serializers_nested.EventNameSerializer()
 
     class Meta:
         model = Medal
-        fields = ('id', 'color', 'event', 'game', 'person_set')
+        fields = ('color', 'event', 'game', 'person_set')
         depth = 1
 
 
@@ -44,7 +44,7 @@ class PersonDetailSerializer(serializers.ModelSerializer):
 
 
 class SportDetailSerializer(serializers.ModelSerializer):
-    event_set = serializers_nested.EventSetSerializer(many=True)
+    event_set = serializers_nested.EventNameSerializer(many=True)
 
     class Meta:
         model = Sport

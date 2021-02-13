@@ -8,16 +8,16 @@ class CountrySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Country
-        fields = ('id', 'url', 'name')
+        fields = ('url', 'name')
 
 
 class EventSerializer(serializers.ModelSerializer):
     url = serializers.HyperlinkedIdentityField(view_name='EventDetail', read_only=True)
+    sport = serializers_nested.SportNameSerializer()
 
     class Meta:
         model = Event
-        fields = ('id', 'url', 'name', 'sport')
-        depth = 1
+        fields = ('url', 'name', 'sport')
 
 
 class GameSerializer(serializers.ModelSerializer):
@@ -25,17 +25,18 @@ class GameSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Game
-        fields = ('id', 'url', 'year', 'city', 'season')
+        fields = ('url', 'year', 'city', 'season')
 
 
 class MedalSerializer(serializers.ModelSerializer):
     url = serializers.HyperlinkedIdentityField(view_name='MedalDetail', read_only=True)
-    event = serializers_nested.EventSimpleSerializer()
+    event = serializers_nested.EventNameSerializer()
     game = serializers_nested.GameSimpleSerializer()
+    person_set = serializers_nested.MedalistsNameSerializer(many=True)
 
     class Meta:
         model = Medal
-        fields = ('id', 'url', 'color', 'event', 'game')
+        fields = ('url', 'color', 'person_set', 'event', 'game')
 
 
 class PersonSerializer(serializers.ModelSerializer):
@@ -44,7 +45,7 @@ class PersonSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Person
-        fields = ('id', 'url', 'name', 'medals')
+        fields = ('url', 'name', 'medals')
 
 
 class SportSerializer(serializers.ModelSerializer):
@@ -52,4 +53,4 @@ class SportSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Sport
-        fields = ('id', 'url', 'name')
+        fields = ('url', 'name')

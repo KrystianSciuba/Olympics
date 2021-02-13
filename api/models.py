@@ -14,9 +14,6 @@ class Event(models.Model):
     name = models.TextField(max_length=256)
     sport = models.ForeignKey(Sport, on_delete=models.CASCADE, null=True, blank=True)
 
-    def __str__(self):
-        return 'Name: {self.event}'.format(self=self)
-
 
 class Game(models.Model):
     id = models.AutoField(primary_key=True)

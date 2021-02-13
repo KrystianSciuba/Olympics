@@ -2,66 +2,76 @@ from rest_framework import serializers
 from .models import *
 
 
-class EventSetSerializer(serializers.ModelSerializer):
+class EventNameSerializer(serializers.ModelSerializer):
+    url = serializers.HyperlinkedIdentityField(view_name='EventDetail')
+
     class Meta:
         model = Event
-        fields = ('id', 'name',)
-
-
-class EventSimpleSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Event
-        fields = ('name',)
+        fields = ('url', 'name')
 
 
 class GameSimpleSerializer(serializers.ModelSerializer):
+    url = serializers.HyperlinkedIdentityField(view_name='GameDetail')
+
     class Meta:
         model = Game
-        fields = ('year', 'city', 'season',)
+        fields = ('url', 'year', 'city', 'season')
 
 
 class GameSerializer(serializers.ModelSerializer):
+    url = serializers.HyperlinkedIdentityField(view_name='GameDetail')
 
     class Meta:
         model = Game
-        exclude = ('events',)
-
-
-class EventNameSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Event
-        fields = ('name',)
+        fields = ('url', 'year', 'city', 'season')
 
 
 class CountryNameSerializer(serializers.ModelSerializer):
+    url = serializers.HyperlinkedIdentityField(view_name='CountryDetail')
+
     class Meta:
         model = Country
-        fields = ('name',)
+        fields = ('url', 'name',)
 
 
 class MedalColorSerializer(serializers.ModelSerializer):
+    url = serializers.HyperlinkedIdentityField(view_name='MedalDetail')
+
     class Meta:
         model = Medal
-        fields = ('color',)
+        fields = ('url', 'color')
 
 
 class MedalSimpleSerializer(serializers.ModelSerializer):
+    url = serializers.HyperlinkedIdentityField(view_name='MedalDetail')
     event = EventNameSerializer()
     game = GameSerializer()
 
     class Meta:
         model = Medal
-        fields = ('id', 'color', 'event', 'game',)
+        fields = ('url', 'color', 'event', 'game')
 
 
-class CountrySimpleSerializer(serializers.ModelSerializer):
+class SportNameSerializer(serializers.ModelSerializer):
+    url = serializers.HyperlinkedIdentityField(view_name='SportDetail')
+
     class Meta:
-        model = Country
-        fields = ('name',)
+        model = Sport
+        fields = ('url', 'name')
 
 
 class PersonSetSerializer(serializers.ModelSerializer):
+    url = serializers.HyperlinkedIdentityField(view_name='PersonDetail')
+    medals = MedalColorSerializer(many=True)
+
     class Meta:
         model = Person
-        exclude = ('medals', 'sex', 'year_of_birth')
-        depth = 2
+        fields = ('url', 'medals', 'sex', 'year_of_birth')
+
+
+class MedalistsNameSerializer(serializers.ModelSerializer):
+    url = serializers.HyperlinkedIdentityField(view_name='PersonDetail')
+
+    class Meta:
+        model = Person
+        fields = ('url', 'name')
