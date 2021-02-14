@@ -20,7 +20,8 @@ urlpatterns = [
 
 
     path('games/<int:pk>/events/', views.game_events_list),
-    path('games/<int:gameid>/events/<int:eventid>', views.game_event_winners, name='GameEventWinners'),
+    path('game-event/<int:pk>', views.game_event_redirect, name='GameEventRedirect'),
+    path('games/<int:game_pk>/events/<int:event_pk>', views.game_event_winners, name='gameevent-detail'),
 
     path('countries/<int:pk>/persons/', views.country_persons_list),
 

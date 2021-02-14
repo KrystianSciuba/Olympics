@@ -1,5 +1,4 @@
 from rest_framework import serializers
-from rest_framework.request import Request
 from .models import *
 from . import serializers_nested
 
@@ -14,19 +13,12 @@ class MedalPeopleSerializer(serializers.ModelSerializer):
         fields = ('id', 'game', 'event', 'color', 'person_set')
 
 
-class GameEventSerializer(serializers.ModelSerializer):
-    
-    pass
+class GameEventUrlOnlySerializer(serializers.ModelSerializer):
+    url = serializers.HyperlinkedIdentityField(view_name='GameEventRedirect')
 
-
-
-# class MedalSerializer(serializers.ModelSerializer):
-#     event = serializers_nested.EventNameSerializer()
-#     person_set = serializers_nested.PersonSetSerializer(many=True)
-#
-#     class Meta:
-#         model = Medal
-#         fields = ('id', 'color', 'event', 'person_set')
+    class Meta:
+        model = GameEvent
+        fields = ('url',)
 
 
 class PersonCountrySerializer(serializers.ModelSerializer):

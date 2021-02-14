@@ -10,6 +10,12 @@ class EventNameSerializer(serializers.ModelSerializer):
         fields = ('url', 'name')
 
 
+class EventNameOnlySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Event
+        fields = ('name',)
+
+
 class GameSimpleSerializer(serializers.ModelSerializer):
     url = serializers.HyperlinkedIdentityField(view_name='GameDetail')
 

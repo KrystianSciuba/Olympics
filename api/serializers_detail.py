@@ -12,6 +12,7 @@ class CountryDetailSerializer(serializers.ModelSerializer):
 
 class EventDetailSerializer(serializers.ModelSerializer):
     sport = serializers_nested.SportNameSerializer()
+
     class Meta:
         model = Event
         fields = ('name', 'sport')

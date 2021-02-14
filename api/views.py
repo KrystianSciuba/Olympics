@@ -101,34 +101,37 @@ def game_events_list(request, pk):
     list_of_events = game.events.all().order_by('name')
     list_of_events_by_sports = {}
     for event in list_of_events:
-        event_serializer = serializers_nested.EventNameSerializer(event, context=serializer_context)
-        # event_serializer = serializers_2nd_level.GameEventSerializer(event, context=serializer_context)
-        event_serializer_data = event_serializer.data
+        event_name_serializer = serializers_nested.EventNameOnlySerializer(event)
+        event_name_serializer_dict = event_name_serializer.data
+
+        game_event = get_object_or_404(GameEvent, game=game, event=event)
+        game_event_url_serializer = serializers_2nd_level.GameEventUrlOnlySerializer(game_event,
+                                                                                     context=serializer_context)
+        game_event_serializer_dict = game_event_url_serializer.data
+        game_event_serializer_dict.update(event_name_serializer_dict)
+
         try:
-            list_of_events_by_sports[event.sport.name].append(event_serializer_data)
+            list_of_events_by_sports[event.sport.name].append(game_event_serializer_dict)
         except KeyError:
             list_of_events_by_sports[event.sport.name] = [event.name]
-            list_of_events_by_sports[event.sport.name].append(event_serializer_data)
+            list_of_events_by_sports[event.sport.name].append(game_event_serializer_dict)
 
     game_serializer = serializers_detail.GameDetailSerializer(game, context=serializer_context)
-    game_serializer_data = game_serializer.data
-    game_serializer_data["events"] = list_of_events_by_sports
-    return Response(game_serializer_data)
-
-
-# @api_view(['GET'])
-# def game_medals_list(request, pk):
-#     game = get_object_or_404(Game, pk=pk)
-#     medals = Medal.objects.filter(game=game)
-#     serializer_context = {'request': request}
-#     medals_serializer = serializers_2nd_level.MedalSerializer(medals, many=True, context=serializer_context)
-#     return Response(medals_serializer.data)
+    game_serializer_dict = game_serializer.data
+    game_serializer_dict["events"] = list_of_events_by_sports
+    return Response(game_serializer_dict)
 
 
 @api_view(['GET'])
-def game_event_winners(request, gameid, eventid):
-    game = get_object_or_404(Game, pk=gameid)
-    event = get_object_or_404(Event, pk=eventid)
+def game_event_redirect(request, pk):
+    game_event = get_object_or_404(GameEvent, pk=pk)
+    return redirect('gameevent-detail', game_pk=game_event.game.id, event_pk=game_event.event.id)
+
+
+@api_view(['GET'])
+def game_event_winners(request, game_pk, event_pk):
+    game = get_object_or_404(Game, pk=game_pk)
+    event = get_object_or_404(Event, pk=event_pk)
     medals = Medal.objects.filter(game=game, event=event)
     serializer_context = {'request': request}
     medals_serializer = serializers_2nd_level.MedalPeopleSerializer(medals, many=True, context=serializer_context)
@@ -147,3 +150,12 @@ def country_persons_list(request, pk):
 def test(request):
     html = "<html><body>test API</body></html>"
     return HttpResponse(html)
+
+
+# @api_view(['GET'])
+# def game_medals_list(request, pk):
+#     game = get_object_or_404(Game, pk=pk)
+#     medals = Medal.objects.filter(game=game)
+#     serializer_context = {'request': request}
+#     medals_serializer = serializers_2nd_level.MedalSerializer(medals, many=True, context=serializer_context)
+#     return Response(medals_serializer.data)
