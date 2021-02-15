@@ -62,18 +62,18 @@ Detail endpoints:
 
 
 ##### _Filters_
----
 
-*Olympic Games:
+Olympic Games:
 *season, min_year, max_year
--
-*Medals
+
+Medals
 *color, year, person
--
+
 Persons
 *name, sex, year, min_year, max_year, nationality
 
 ##### _Screenshots_
+---
 
 _List of Olympic Games_
 ![List of Olympic Games](https://raw.githubusercontent.com/KrystianSciuba/Olympics/master/readme_files/1_list-of-games.PNG)
