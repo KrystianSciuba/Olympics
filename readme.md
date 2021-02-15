@@ -34,16 +34,23 @@ Project is created with:
 
 * browsable database
 
-_Layout_
 
+_List of Olympic Games_
 ![List of Olympic Games](https://raw.githubusercontent.com/KrystianSciuba/Olympics/master/readme_files/1_list-of-games.PNG)
 
+
+_Person details_
 ![Person details](https://raw.githubusercontent.com/KrystianSciuba/Olympics/master/readme_files/2_person-detail.PNG)
 
+
+_Medal details_
 ![Medal details](https://raw.githubusercontent.com/KrystianSciuba/Olympics/master/readme_files/3_medal-details.PNG)
 
+_Competition results_
 ![Competition results](https://raw.githubusercontent.com/KrystianSciuba/Olympics/master/readme_files/4_game-events-winners.PNG)
 
+
+_Example of GET request in Postman (with parameters)_
 ![Example of GET request in Postman (with parameters)](https://raw.githubusercontent.com/KrystianSciuba/Olympics/master/readme_files/5_postman.PNG)
 
 
