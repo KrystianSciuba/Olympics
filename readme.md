@@ -64,13 +64,13 @@ Detail endpoints:
 ##### _Filters_
 
 Olympic Games:
-*season, min_year, max_year
+* season, min_year, max_year
 
 Medals
-*color, year, person
+* color, year, person
 
 Persons
-*name, sex, year, min_year, max_year, nationality
+* name, sex, year, min_year, max_year, nationality
 
 ##### _Screenshots_
 ---
@@ -96,7 +96,10 @@ _Example of GET request in Postman (with parameters)_
 ### Info
 
 ---
-some other informations
+dataset source:
+[https://www.kaggle.com/heesoo37/120-years-of-olympic-history-athletes-and-results]
+
+some data might be inaccurate
 
 
 
