@@ -93,11 +93,17 @@ _Competition results_
 _Example of GET request in Postman (with parameters)_
 ![Example of GET request in Postman (with parameters)](https://raw.githubusercontent.com/KrystianSciuba/Olympics/master/readme_files/5_postman.PNG)
 
+### Status
+
+---
+
+The project is under development. More endpoints, filters, functionalities and data visualisation are planned to be implemented. 
+
 ### Info
 
 ---
 dataset source:
-[https://www.kaggle.com/heesoo37/120-years-of-olympic-history-athletes-and-results]
+https://www.kaggle.com/heesoo37/120-years-of-olympic-history-athletes-and-results
 
 some data might be inaccurate
 
