@@ -34,21 +34,18 @@ Project is created with:
 
 * multiple endpoints and filters
 
----
 
 ##### _Endpoints_
 
----
-
-* List Endpoints:
+List Endpoints:
 * api/ countries/
 * api/ events/
 * api/ games/
 * api/ medals/
 * api/ persons/
 * api/ sports/
--
-* Detail endpoints:
+
+Detail endpoints:
 * api/ countries/<int:pk> 
 * api/ countries/<str:name>
 * api/ events/<int:pk> 
@@ -56,18 +53,17 @@ Project is created with:
 * api/ medals/<int:pk> 
 * api/ persons/<int:pk> 
 * api/ sports/<int:pk> 
--
-* 2nd level requests:
+
+2nd level requests:
 * api/ games/<int:pk>/events/
 * api/ game-event/<int:pk> 
 * api/ games/<int:game_pk>/events/<int:event_pk> 
 * api/ countries/<int:pk>/persons/
 
----
 
 ##### _Filters_
-
 ---
+
 *Olympic Games:
 *season, min_year, max_year
 -
@@ -76,7 +72,6 @@ Project is created with:
 -
 Persons
 *name, sex, year, min_year, max_year, nationality
----
 
 ##### _Screenshots_
 
