@@ -1,6 +1,6 @@
 # Olympics API
 
-Web application for a database of Olympic Games. The database contains information about disciplines, medalists, sports, etc. It uses REST architecture and JSON format to communicate with the client. The project is under development.
+Web application for browsing a database of Olympic Games. The database contains information about disciplines, medalists, sports, etc. It uses REST architecture and JSON format to communicate with the client. The project is under development.
 
 ### Table of contents
 
@@ -12,7 +12,7 @@ Web application for a database of Olympic Games. The database contains informati
 
 * [Status](#status)
 
-* [Info](#info)
+* [Other informations](#other-informations)
 
 ### Build with
 
@@ -38,27 +38,27 @@ Project is created with:
 ##### _Endpoints_
 
 List Endpoints:
-* api/ countries/
-* api/ events/
-* api/ games/
-* api/ medals/
-* api/ persons/
-* api/ sports/
+* api/countries/
+* api/events/
+* api/games/
+* api/medals/
+* api/persons/
+* api/sports/
 
 Detail endpoints:
-* api/ countries/<int:pk> 
-* api/ countries/<str:name>
-* api/ events/<int:pk> 
-* api/ games/<int:pk> 
-* api/ medals/<int:pk> 
-* api/ persons/<int:pk> 
-* api/ sports/<int:pk> 
+* api/countries/<int:pk> 
+* api/countries/<str:name>
+* api/events/<int:pk> 
+* api/games/<int:pk> 
+* api/medals/<int:pk> 
+* api/persons/<int:pk> 
+* api/sports/<int:pk> 
 
 2nd level requests:
-* api/ games/<int:pk>/events/
-* api/ game-event/<int:pk> 
-* api/ games/<int:game_pk>/events/<int:event_pk> 
-* api/ countries/<int:pk>/persons/
+* api/games/<int:pk>/events/
+* api/game-event/<int:pk> 
+* api/games/<int:game_pk>/events/<int:event_pk> 
+* api/countries/<int:pk>/persons/
 
 
 ##### _Filters_
@@ -99,7 +99,7 @@ _Example of GET request in Postman (with parameters)_
 
 The project is under development. More endpoints, filters, functionalities and data visualisation are planned to be implemented. 
 
-### Info
+### Other informations
 
 ---
 dataset source:
