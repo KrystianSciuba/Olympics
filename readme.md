@@ -2,6 +2,11 @@
 
 Web application for browsing a database of Olympic Games. The database contains information about disciplines, medalists, sports, etc. It uses REST architecture and JSON format to communicate with the client. The project is under development.
 
+Demo version of the API is availible on Heroku:
+* https://olympics-ks.herokuapp.com/api/games/
+
+Due to datebase limits, data of only 2 lastest Olympic Games is availible (52 and 51).
+
 ### Table of contents
 
 ---
