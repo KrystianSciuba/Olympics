@@ -5,40 +5,62 @@
     <title>Title</title>
 </head>
 <body>
-API HOMEPAGE<br><br>
-
+API HOMEPAGE<br>
 <ul>
     <li>List Endpoints:</li>
     <ul>
-        <li><a href="countries/"> <code> api/countries/ </code></a> list of countries</li>
-        <li><a href="events/"> <code> api/events/ </code></a> list of events</li>
-        <li><a href="games/"> <code> api/games/ </code></a> list of games</li>
-        <li><a href="medals/"> <code> api/medals/ </code></a> list of medals</li>
-        <li><a href="persons/"> <code> api/persons/ </code></a> list of persons</li>
-        <li><a href="sports/"> <code> api/sports/ </code></a> list of sports</li>
+        <li><a href="countries/"><code>api/countries/</code></a>&nbsp;&nbsp; list of countries</li>
+        <li><a href="events/"><code>api/events/</code></a>&nbsp;&nbsp; list of events</li>
+        <li><a href="games/"><code>api/games/</code></a>&nbsp;&nbsp; list of games</li>
+        <li><a href="medals/"><code>api/medals/</code></a>&nbsp;&nbsp; list of medals</li>
+        <li><a href="persons/"><code>api/persons/</code></a>&nbsp;&nbsp; list of persons</li>
+        <li><a href="sports/"><code>api/sports/</code></a>&nbsp;&nbsp; list of sports</li>
     </ul>
     <li>Detail Endpoints:</li>
     <ul>
-        <li><a href="countries/105"> <code>api/countries/&ltint&gt </code></a>deteils of country</li>
-        <li><a href="countries/POL"> <code>api/countries/&ltstr&gt </code></a>deteils of country</li>
-        <li><a href="events/1"> <code>api/events/&ltint&gt </code></a>deteils of event</li>
-        <li><a href="games/52"> <code>api/games/&ltint&gt </code></a>deteils of game</li>
-        <li><a href="medals/1"> <code>api/medals/&ltint&gt </code></a>deteils of medal</li>
-        <li><a href="persons/25627"> <code>api/persons/&ltint&gt </code></a>deteils of person</li>
-        <li><a href="sports/55"> <code>api/sports/&ltint&gt </code></a>deteils of sport</li>
+        <li><a href="countries/105"><code>api/countries/&ltint&gt</code></a>&nbsp;&nbsp; details of the country</li>
+        <li><a href="countries/POL"><code>api/countries/&ltstr&gt</code></a>&nbsp;&nbsp; details of the country</li>
+        <li><a href="events/1"><code>api/events/&ltint&gt</code></a>&nbsp;&nbsp; details of the event</li>
+        <li><a href="games/52"><code>api/games/&ltint&gt</code></a>&nbsp;&nbsp; details of the game</li>
+        <li><a href="medals/1"><code>api/medals/&ltint&gt</code></a>&nbsp;&nbsp; details of the medal</li>
+        <li><a href="persons/25627"><code>api/persons/&ltint&gt</code></a>&nbsp;&nbsp; details of the person</li>
+        <li><a href="sports/55"><code>api/sports/&ltint&gt</code></a>&nbsp;&nbsp; details of the sport</li>
     </ul>
-
     <li>2nd level Endpoints</li>
     <ul>
-        <li><a href="games/52/events"> <code> api/games/&ltint&gt/events </code> </a> list of events on selected games
-        </li>
-        <li><a href="games/52/events/70"> <code> /games/&ltint&gt/events/&ltint&gt </code> </a> results of selected
-            event on selected games
-        </li>
-        <li><a href="countries/105/persons"> <code> api/countries/&ltint&gt/persons </code> </a> list of sportsmen and
-            sportswomen from selected country
-        </li>
+        <li><a href="games/52/events"><code>api/games/&ltint&gt/events</code></a>&nbsp;&nbsp;list of events on selected games</li>
+        <li><a href="games/52/events/70"><code>api/games/&ltint&gt/events/&ltint&gt</code></a>&nbsp;&nbsp; results of selected event on selected games</li>
+        <li><a href="countries/105/persons"><code>api/countries/&ltint&gt/persons</code></a>&nbsp;&nbsp; list of sportsmen and sportswomen from selected country</li>
+    </ul>
+    <li>Filter parameters</li>
+    <ul>
+        <li>Olympic games filters</li>
+        <ul>
+            <li><a href="games/?season=summer"><code>api/games/?season=summer</code></a>&nbsp;&nbsp; season: summer or winter</li>
+            <li><a href="games/?min_year=1990"><code>api/games/?min_year=1990</code></a>&nbsp;&nbsp; earliest year of olympic game</li>
+            <li><a href="games/?max_year=1985"><code>api/games/?max_year=1985</code></a>&nbsp;&nbsp; latest year of olympic game</li>
+        </ul>
+        <li>Medal filters</li>
+        <ul>
+            <li><a href="medals/?color=gold"><code>api/games/?color=gold</code></a>&nbsp;&nbsp; color: gold, silver, bronze</li>
+            <li><a href="medals/?year=2016"><code>api/games/?year=2016</code></a>&nbsp;&nbsp; year of competition</li>
+            <li><a href="medals/?person=stoch"><code>api/games/?person=stoch</code></a>&nbsp;&nbsp; part of winner's name</li>
+        </ul>
+           <li>Person filters</li>
+        <ul>
+            <li><a href="persons/?name=cristian"><code>api/persons/?name=cristian</code></a>&nbsp;&nbsp; part of persons name</li>
+            <li><a href="persons/?sex=f"><code>api/persons/?sex=f</code></a>&nbsp;&nbsp; sex: M or F</li>
+            <li><a href="persons/?year=1985"><code>api/persons/?year=1985</code></a>&nbsp;&nbsp; year of birth</li>
+            <li><a href="persons/?min_year=1985"><code>api/persons/?min_year=1985</code></a>&nbsp;&nbsp; earliest year of birth</li>
+            <li><a href="persons/?max_year=1985"><code>pi/persons/?max_year=1985</code></a>&nbsp;&nbsp; latest year of birth</li>
+            <li><a href="persons/?nationality=pol"><code>api/persons/?nationality=pol</code></a>&nbsp;&nbsp; nationality, usa, pol, ger, etc.</li>
+        </ul>
     </ul>
 </ul>
+    <p>
+        <small>Due to Heroku database limits, full data of only two Olympic Games is available (2016 Rio de Janeiro, and 2014 Sochi).
+        Some data might be inaccurate.<br>
+        <a href=https://www.kaggle.com/heesoo37/120-years-of-olympic-history-athletes-and-results">Dataset source</a></small>
+    </p>
 </body>
 </html>
