@@ -1,10 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+API HOMEPAGE<br><br>
+
+<ul>
+    <li>List Endpoints:</li>
+    <ul>
+        <li><a href="countries/"> <code> api/countries/ </code></a> list of countries</li>
+        <li><a href="events/"> <code> api/events/ </code></a> list of events</li>
+        <li><a href="games/"> <code> api/games/ </code></a> list of games</li>
+        <li><a href="medals/"> <code> api/medals/ </code></a> list of medals</li>
+        <li><a href="persons/"> <code> api/persons/ </code></a> list of persons</li>
+        <li><a href="sports/"> <code> api/sports/ </code></a> list of sports</li>
+    </ul>
+    <li>Detail Endpoints:</li>
+    <ul>
+        <li><a href="countries/105"> <code>api/countries/&ltint&gt </code></a>deteils of country</li>
+        <li><a href="countries/POL"> <code>api/countries/&ltstr&gt </code></a>deteils of country</li>
+        <li><a href="events/1"> <code>api/events/&ltint&gt </code></a>deteils of event</li>
+        <li><a href="games/52"> <code>api/games/&ltint&gt </code></a>deteils of game</li>
+        <li><a href="medals/1"> <code>api/medals/&ltint&gt </code></a>deteils of medal</li>
+        <li><a href="persons/1"> <code>api/persons/&ltint&gt </code></a>deteils of person</li>
+        <li><a href="sports/1"> <code>api/sports/&ltint&gt </code></a>deteils of sport</li>
+    </ul>
+
+    <li>2nd level Endpopints</li>
+    <ul>
+        <li><a href="games/52/events"> <code> api/games/&ltint&gt/events </code> </a> list of events on selected games
+        </li>
+        <li><a href="games/52/events/70"> <code> /games/&ltint&gt/events/&ltint&gt </code> </a> results of selected
+            event on selected games
+        </li>
+        <li><a href="countries/105/persons"> <code> api/countries/&ltint&gt/persons </code> </a> list of sportsmen and
+            sportswomen from selected country
+        </li>
+    </ul>
+</ul>
 </body>
 </html>

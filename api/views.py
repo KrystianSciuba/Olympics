@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import get_object_or_404, redirect
+from django.shortcuts import get_object_or_404, redirect, render
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from . import serializers_list, serializers_detail, serializers_2nd_level, serializers_nested
@@ -150,6 +150,12 @@ def country_persons_list(request, pk):
 def test(request):
     html = "<html><body>test API</body></html>"
     return HttpResponse(html)
+
+
+def home_page(request):
+    template = 'api/templates/home.html'
+    return render(request, template)
+
 
 
 # @api_view(['GET'])

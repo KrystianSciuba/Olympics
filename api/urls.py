@@ -25,6 +25,7 @@ urlpatterns = [
 
     path('countries/<int:pk>/persons/', views.country_persons_list),
 
+    path('', views.home_page),
     path('test/', views.test),
 ]
 
