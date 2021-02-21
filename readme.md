@@ -2,10 +2,10 @@
 
 Web application for browsing a database of Olympic Games. The database contains information about disciplines, medalists, sports, etc. It uses REST architecture and JSON format to communicate with the client. The project is under development.
 
-Demo version of the API is availible on Heroku:
-* https://olympics-ks.herokuapp.com/api/games/
+Demo version of the API is available on Heroku:
+* http://olympics-ks.herokuapp.com/api/
 
-Due to datebase limits, data of only 2 lastest Olympic Games is availible (52 and 51).
+Due to database limits, data of only 2  Olympic Games is available (52 and 51).
 
 ### Table of contents
 
@@ -17,7 +17,7 @@ Due to datebase limits, data of only 2 lastest Olympic Games is availible (52 an
 
 * [Status](#status)
 
-* [Other informations](#other-informations)
+* [Other information](#other-information)
 
 ### Build with
 
@@ -31,6 +31,8 @@ Project is created with:
 
 * DRF
 
+* PostgreSQL
+
 ### Functionality
 
 ---
@@ -42,7 +44,7 @@ Project is created with:
 
 ##### _Endpoints_
 
-List Endpoints:
+List endpoints:
 * api/countries/
 * api/events/
 * api/games/
@@ -104,14 +106,10 @@ _Example of GET request in Postman (with parameters)_
 
 The project is under development. More endpoints, filters, functionalities and data visualisation are planned to be implemented. 
 
-### Other informations
+### Other information
 
 ---
 dataset source:
 https://www.kaggle.com/heesoo37/120-years-of-olympic-history-athletes-and-results
 
 some data might be inaccurate
-
-
-
-
