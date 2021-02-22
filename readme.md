@@ -5,7 +5,7 @@ Web application for browsing a database of Olympic Games. The database contains 
 Demo version of the API is available on Heroku:
 * http://olympics-ks.herokuapp.com/api/
 
-Due to database limits, data of only 2  Olympic Games is available (52 and 51).
+Due to database limits, data of only two Olympic Games is available (52 and 51).
 
 ### Table of contents
 
@@ -14,6 +14,8 @@ Due to database limits, data of only 2  Olympic Games is available (52 and 51).
 * [Build with](#build-with)
 
 * [Functionality](#functionality)
+
+* [Database](#Database)
 
 * [Status](#status)
 
@@ -32,6 +34,8 @@ Project is created with:
 * DRF
 
 * PostgreSQL
+
+* HTML
 
 ### Functionality
 
@@ -80,6 +84,7 @@ Persons
 * name, sex, year, min_year, max_year, nationality
 
 ##### _Screenshots_
+
 ---
 
 _List of Olympic Games_
@@ -99,6 +104,18 @@ _Competition results_
 
 _Example of GET request in Postman (with parameters)_
 ![Example of GET request in Postman (with parameters)](https://raw.githubusercontent.com/KrystianSciuba/Olympics/master/readme_files/5_postman.PNG)
+
+### Database
+
+---
+Data presented in this app has been downloaded from
+[Kaggle](#https://www.kaggle.com/heesoo37/120-years-of-olympic-history-athletes-and-results).
+The source database is flat but has been converted to relational database by filtering, splitting and adding relations to the data. 
+Current database schema is shown below:
+
+_Database schema_
+![Database schema](https://raw.githubusercontent.com/KrystianSciuba/Olympics/master/readme_files/6_database-schema.PNG)
+
 
 ### Status
 
