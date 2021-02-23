@@ -45,7 +45,7 @@ class PersonSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Person
-        fields = ('url', 'name', 'medals')
+        fields = ('url', 'name', 'year_of_birth','medals')
 
 
 class SportSerializer(serializers.ModelSerializer):
