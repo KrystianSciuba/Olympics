@@ -57,31 +57,40 @@ List endpoints:
 * api/sports/
 
 Detail endpoints:
-* api/countries/<int:pk> 
-* api/countries/<str:name>
-* api/events/<int:pk> 
-* api/games/<int:pk> 
-* api/medals/<int:pk> 
-* api/persons/<int:pk> 
-* api/sports/<int:pk> 
+* api/countries/[int:pk]
+* api/countries/[str:name]
+* api/events/[int:pk]
+* api/games/[int:pk]
+* api/medals/[int:pk]
+* api/persons/[int:pk]
+* api/sports/[int:pk]
 
 2nd level requests:
-* api/games/<int:pk>/events/
-* api/game-event/<int:pk> 
-* api/games/<int:game_pk>/events/<int:event_pk> 
-* api/countries/<int:pk>/persons/
+* api/games/[int:pk]/events/
+* api/game-event/[int:pk]
+* api/games/[int:game_pk]/events/[int:event_pk] 
+* api/countries/[int:pk]/persons/
 
 
 ##### _Filters_
 
 Olympic Games:
-* season, min_year, max_year
+* season (summer or winter)
+* min_year (earliest year of olympic game)
+* max_year (latest year of olympic game)
 
 Medals
-* color, year, person
+* color (gold, silver, bronze)
+* year (year of competition)
+* person (part of winner's name)
 
 Persons
-* name, sex, year, min_year, max_year, nationality
+* name (part of persons name)
+* sex (M or F)
+* year (year of birth)
+* min_year (earliest year of birth)
+* max_year (latest year of birth)
+* nationality (usa, pol, ger, etc.)
 
 ##### _Screenshots_
 
@@ -108,7 +117,7 @@ _Competition results_
 
 _Example of GET request in Postman (with parameters)_
 
-![Example of GET request in Postman (with parameters)](https://raw.githubusercontent.com/KrystianSciuba/Olympics/master/readme_files/5_postman.PNG)
+![Example of GET request in Postman (with parameters)](https://raw.githubusercontent.com/KrystianSciuba/Olympics/master/readme_files/5_postman-list.PNG)
 
 ### Database
 
