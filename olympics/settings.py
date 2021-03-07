@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import django_heroku
+import dj_database_url
+from decouple import config
 #import pymysql
 
 
@@ -60,6 +63,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'olympics.urls'
@@ -86,14 +90,14 @@ WSGI_APPLICATION = 'olympics.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        'NAME': 'olympics_db',
-        'USER': 'postgres',                      
-        'PASSWORD': 'password',
-        'HOST': 'localhost',                 
+        'NAME': 'df1u1n4mo7rcdr',
+        'USER': 'vrrsjzhwfwzrhm',
+        'PASSWORD': '29bde2cf09da3100e816325051e0a7740a17e8824da26da450d7536dee9bddcd',
+        'HOST': 'ec2-52-7-168-69.compute-1.amazonaws.com',
         'PORT': '5432',        
     }
 }
-
+# postgres://vrrsjzhwfwzrhm:29bde2cf09da3100e816325051e0a7740a17e8824da26da450d7536dee9bddcd@ec2-52-7-168-69.compute-1.amazonaws.com:5432/df1u1n4mo7rcdr
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -132,3 +136,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+django_heroku.settings(locals())

@@ -27,11 +27,11 @@ Due to database limits, data of only two Olympic Games is available (52 and 51).
 
 Project is created with:
 
-* Python
+* Python (3.8.1)
 
-* Django
+* Django (3.0.3)
 
-* DRF
+* DRF (3.12.2)
 
 * PostgreSQL
 
