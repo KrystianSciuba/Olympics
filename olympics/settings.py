@@ -90,10 +90,10 @@ WSGI_APPLICATION = 'olympics.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        'NAME': 'df1u1n4mo7rcdr',
-        'USER': 'vrrsjzhwfwzrhm',
-        'PASSWORD': '29bde2cf09da3100e816325051e0a7740a17e8824da26da450d7536dee9bddcd',
-        'HOST': 'ec2-52-7-168-69.compute-1.amazonaws.com',
+        'NAME': 'olympics_db_test',
+        'USER': 'postgres',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
         'PORT': '5432',        
     }
 }
