@@ -10,7 +10,7 @@ RUN \
 	python3 -m pip install -r requirements.txt --no-cache-dir && \
 	apk --purge del .build-deps
 
-RUN mkdir /olympic
-WORKDIR /olympic
-COPY . /olympic
+RUN mkdir /olympics
+WORKDIR /olympics
+COPY . /olympics
 

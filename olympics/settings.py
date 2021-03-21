@@ -88,31 +88,27 @@ WSGI_APPLICATION = 'olympics.wsgi.application'
 
 
 DATABASES = {    
-    # "default": {
-        # "ENGINE": "django.db.backends.postgresql",
-        # 'NAME': 'db_api',
-        # 'USER': 'user',
-        # 'PASSWORD': "pass",
-        # 'HOST': 'db_api',
-        # 'PORT': '5432',
-    # },
-    # "default": {
-        # "ENGINE": "django.db.backends.postgresql",
-        # 'NAME': 'df1u1n4mo7rcdr',
-        # 'USER': 'vrrsjzhwfwzrhm',
-        # 'PASSWORD': '29bde2cf09da3100e816325051e0a7740a17e8824da26da450d7536dee9bddcd',
-        # 'HOST': 'ec2-52-7-168-69.compute-1.amazonaws.com',
-        # 'PORT': '5432',        
-    # },
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        'NAME': 'olympics_db',
-        'USER': 'postgres',                      
-        'PASSWORD': 'password',
-        'HOST': 'localhost',                 
-        'PORT': '5432',        
+        'NAME': 'db_api',
+        'USER': 'user',
+        'PASSWORD': "pass",
+        'HOST': 'db_api',
+        'PORT': '5432',
     },
+    "default0": {
+        "ENGINE": "django.db.backends.postgresql",
+        'NAME': 'df1u1n4mo7rcdr',
+        'USER': 'vrrsjzhwfwzrhm',
+        'PASSWORD': '29bde2cf09da3100e816325051e0a7740a17e8824da26da450d7536dee9bddcd',
+        'HOST': 'ec2-52-7-168-69.compute-1.amazonaws.com',
+        'PORT': '5432',        
+    }
 }
+# postgres://vrrsjzhwfwzrhm:29bde2cf09da3100e816325051e0a7740a17e8824da26da450d7536dee9bddcd@ec2-52-7-168-69.compute-1.amazonaws.com:5432/df1u1n4mo7rcdr
+
+# Password validation
+# https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
