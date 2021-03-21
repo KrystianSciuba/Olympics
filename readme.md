@@ -19,6 +19,8 @@ Due to database limits, data of only two Olympic Games is available (52 and 51).
 
 * [Status](#status)
 
+* [Deployment](#deployment)
+
 * [Other information](#other-information)
 
 ### Build with
@@ -34,6 +36,8 @@ Project is created with:
 * DRF (3.12.2)
 
 * PostgreSQL
+
+* Docker
 
 * HTML
 
@@ -137,6 +141,33 @@ _Database schema_
 ---
 
 The project is under development. More endpoints, filters, functionalities and data visualisation are planned to be implemented. 
+
+### Deployment
+
+```shell
+# get a copy of the application's files
+git clone https://github.com/KrystianSciuba/Olympics.git 
+
+# enter the project folder
+cd Olympics
+
+# build the app with docker-compose
+docker-compose build
+
+# run the container in the background
+docker-compose up -d
+
+#copy the sql file to the container
+docker cp api_db.sql olympics_db_api_1:/
+
+# run the command from the sql file
+docker container exec -it olympics_db_api_1 psql --dbname=db_api --username user -f api_db.sql
+
+# start the app in the browser
+http://192.168.99.100:8000/api/
+
+# Enjoy!
+```
 
 ### Other information
 
