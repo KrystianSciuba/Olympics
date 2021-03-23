@@ -163,8 +163,11 @@ docker cp api_db.sql olympics_db_api_1:/
 # run the command from the sql file
 docker container exec -it olympics_db_api_1 psql --dbname=db_api --username user -f api_db.sql
 
-# start the app in the browser
-http://192.168.99.100:8000/api/
+[# or in case of "the input device is not a TTY" error
+winpty docker container exec -it olympics_db_api_1 psql --dbname=db_api --username user -f api_db.sql]
+
+# start the app in a browser using Docker IP and port 8000
+http://192.168.99.100:8000/api/ 
 
 # Enjoy!
 ```
