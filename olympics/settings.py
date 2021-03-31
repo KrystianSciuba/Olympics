@@ -25,10 +25,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '0li_gsp1su3lkw%r=c4p!qo4vuctq@pe1agqy7kaf+tjk*rzir'
+SECRET_KEY = os.environ.get('SECRET_KEY2')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DEBUG1", False)
 
 ALLOWED_HOSTS = []
 
@@ -87,23 +87,24 @@ TEMPLATES = [
 WSGI_APPLICATION = 'olympics.wsgi.application'
 
 
-DATABASES = {    
+DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        'NAME': 'db_api',
-        'USER': 'user',
-        'PASSWORD': "pass",
-        'HOST': 'db_api',
+        'NAME': os.environ.get('DB_NAME2'),
+        'USER': os.environ.get('DB_USER2'),
+        'PASSWORD': os.environ.get('DB_PASS2'),
+        'HOST': os.environ.get('DB_HOST2'),
         'PORT': '5432',
     },
-    "default0": {
-        "ENGINE": "django.db.backends.postgresql",
-        'NAME': 'df1u1n4mo7rcdr',
-        'USER': 'vrrsjzhwfwzrhm',
-        'PASSWORD': '29bde2cf09da3100e816325051e0a7740a17e8824da26da450d7536dee9bddcd',
-        'HOST': 'ec2-52-7-168-69.compute-1.amazonaws.com',
-        'PORT': '5432',        
-    }
+    #complete local db:
+    # "default": {
+    #     "ENGINE": "django.db.backends.postgresql",
+    #     'NAME': 'olympics_db',
+    #     'USER': 'postgres',
+    #     'PASSWORD': 'password',
+    #     'HOST': 'localhost',
+    #     'PORT': '5432',
+    # },
 }
 # postgres://vrrsjzhwfwzrhm:29bde2cf09da3100e816325051e0a7740a17e8824da26da450d7536dee9bddcd@ec2-52-7-168-69.compute-1.amazonaws.com:5432/df1u1n4mo7rcdr
 
